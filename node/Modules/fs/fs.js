@@ -28,12 +28,3 @@ function readDelay() {
   }, 2000);
 }
 readDelay();
-
-function pipeDelay() {
-  setTimeout(() => {
-    const reader = fs.createReadStream("Date.txt");
-    const writer = fs.createWriteStream("copy.txt");
-    reader.pipe(writer);
-  }, 3000);
-}
-pipeDelay();
