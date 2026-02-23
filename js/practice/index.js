@@ -82,20 +82,21 @@ Flatten a nested array into a single array.
 ===========================================
 */
 
-// let result = [];
 
 function flatten(array) {
+  let result = [];
+
   for (let i = 0; i < array.length; i++) {
     if (Array.isArray(array[i])) {
-      flatten(array[i]);
+      result = result.concat(flatten(array[i]));
     } else {
       result.push(array[i]);
     }
   }
+  return result
 }
 
-// flatten([1, [2, [3, [4, [5, [6, [7, [8, [9, [10]]]]]]]]]]);
-// console.log(result); // [1,2,3,4,5,6,7,8,9,10]
+console.log(flatten([1, [2, [3, [4, [5, [6, [7, [8, [9, [10]]]]]]]]]]));
 
 
 /*

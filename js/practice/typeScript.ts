@@ -6,4 +6,10 @@ function counttVowels(string:string):number {
     }
     return count
 }
-console.log(counttVowels("hoakewoi"));
+// console.log(counttVowels("hoakewoi"));
+
+let words = ["safwan", "diya", "arjun"];
+let answer = words.map((word:string)=> {
+    return word.toUpperCase();
+});
+console.log(answer);
