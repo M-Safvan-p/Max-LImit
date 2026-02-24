@@ -5,6 +5,9 @@ const port = 3000;
 app.get("/", (req, res) => {
     res.send("Landing page");
 })
+// .post((req, res) => {
+    // this is rouuter chainning 
+// })
 
 app.get("/home", (req, res) => {
     res.send("Home page");
