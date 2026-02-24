@@ -75,29 +75,6 @@ function secLarge(array) {
 
 // secLarge([12, 5, 2, 6, 7, 2]); // 7
 
-/*
-===========================================
-Question:
-Flatten a nested array into a single array.
-===========================================
-*/
-
-
-function flatten(array) {
-  let result = [];
-
-  for (let i = 0; i < array.length; i++) {
-    if (Array.isArray(array[i])) {
-      result = result.concat(flatten(array[i]));
-    } else {
-      result.push(array[i]);
-    }
-  }
-  return result
-}
-
-console.log(flatten([1, [2, [3, [4, [5, [6, [7, [8, [9, [10]]]]]]]]]]));
-
 
 /*
 ===========================================
