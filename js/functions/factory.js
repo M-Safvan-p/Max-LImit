@@ -11,4 +11,4 @@ function createUser(name, age){
 const user1 = createUser("Safwan", 18);
 const user2 = createUser("Munnas", 19);
 
-user1.greet();
+user1.greet(); // Hello Safwan
