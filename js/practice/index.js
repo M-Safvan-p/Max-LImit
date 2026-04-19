@@ -23,6 +23,9 @@ function countVowels(string) {
 Question:
 Print all prime numbers from a given array.
 ===========================================
+prime Numbers :-
+      A prime number can be divided only by 1 and the same number
+      It cannot be divided evenly by any other number
 */
 
 // let result = [];
@@ -192,12 +195,6 @@ function getAllFiles(folder) {
 // console.log(getAllFiles(fileSystem));
 // ["file1.txt","file2.txt","doc1.pdf","doc2.pdf","resume.docx","photo1.jpg","photo2.jpg"]
 
-/*
-===========================================
-Question:
-Find the student who scored the highest mark in a given subject.
-===========================================
-*/
 
 /*
 ===========================================
