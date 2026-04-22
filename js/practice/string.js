@@ -42,4 +42,77 @@ function findLongestWordLength(sentence) {
 }
 
 // Example
-console.log(findLongestWordLength("I am learning JavaScript"));
+// console.log(findLongestWordLength("I am learning JavaScript"));
+
+
+/*
+===========================================
+Question:
+Convert a string to Camel Case.
+===========================================
+*/
+
+function toCamelCase(string) {
+  let words = string.split(" ");
+  let result = "";
+
+  for (let word of words) {
+    let first = word[0].toUpperCase();
+    let rest = word.slice(1);
+    result += first + rest;
+  }
+
+  return result;
+}
+
+// Example
+// console.log(toCamelCase("hello world safwan"));
+
+/*
+===========================================
+Question:
+Remove all non-alphabetic characters from a string.
+===========================================
+*/
+
+function removeNonAlphabetic(string) {
+  let result = "";
+
+  for (let ch of string) {
+    if ((ch >= "A" && ch <= "Z") || (ch >= "a" && ch <= "z")) {
+      result += ch;
+    }
+  }
+
+  return result;
+}
+
+// Example
+console.log(removeNonAlphabetic("hadfw232$#@%!2sfss"));
+
+/*
+===========================================
+Question:
+Check if two strings are valid anagrams.
+===========================================
+*/
+
+function isAnagram(s, t) {
+  if (s.length !== t.length) return false;
+
+  let freq = {};
+
+  for (let ch of s) {
+    freq[ch] = (freq[ch] || 0) + 1;
+  }
+
+  for (let ch of t) {
+    freq[ch] = (freq[ch] || 0) - 1;
+    if (freq[ch] < 0) return false;
+  }
+
+  return true;
+}
+
+// Example
+console.log(isAnagram("listen", "silent"));
