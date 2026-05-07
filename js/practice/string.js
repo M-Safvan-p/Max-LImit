@@ -116,3 +116,24 @@ function isAnagram(s, t) {
 
 // Example
 console.log(isAnagram("listen", "silent"));
+
+
+/*
+===========================================
+Question:
+Count how many vowels are in a given string.
+===========================================
+*/
+
+function countVowels(string) {
+  let vowels = "aeiou";
+  let count = 0;
+
+  for (let ch of string.toLowerCase()) {
+    if (vowels.includes(ch)) count++;
+  }
+
+  return count;
+}
+
+// console.log(countVowels("howe")); // 2
