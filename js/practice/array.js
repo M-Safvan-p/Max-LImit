@@ -166,3 +166,95 @@ const products = [
 ];
 
 // console.log(groupByCategory(products));
+
+/*
+===========================================
+Question:
+Print all prime numbers from a given array.
+===========================================
+prime Numbers :-
+      A prime number can be divided only by 1 and the same number
+      It cannot be divided evenly by any other number
+*/
+
+// let result = [];
+// let check = true;
+
+function removePrime(array) {
+  for (let num of array) {
+    check = true;
+
+    if (num < 2) break;
+
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+        check = false;
+      }
+    }
+
+    if (check) result.push(num);
+  }
+
+  console.log(result);
+}
+
+// removePrime([3, 5, 2, 6, 7, 12]); // [3, 5, 2, 7]
+
+
+
+/*
+===========================================
+Question:
+Find the second largest number in a given array.
+===========================================
+*/
+
+function secLarge(array) {
+  let largest = 0;
+  let second = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > largest) {
+      second = largest;
+      largest = array[i];
+    } else {
+      if (array[i] > second) {
+        second = array[i];
+      }
+    }
+  }
+
+  console.log(second);
+}
+
+// secLarge([12, 5, 2, 6, 7, 2]); // 7
+
+
+/*
+===========================================
+Question:
+Remove duplicate even numbers from an array 
+while keeping odd numbers unchanged.
+===========================================
+*/
+
+function removeDupEven(array) {
+  let unique = new Map();
+  let result = [];
+
+  for (let n of array) {
+    if (n % 2 == 0) {
+      if (!unique.has(n)) {
+        unique.set(n, true);
+        result.push(n);
+      }
+    } else {
+      result.push(n);
+    }
+  }
+
+  console.log(result);
+}
+
+// removeDupEven([2, 3, 4, 5, 2, 3, 4, 5, 3, 0]); 
+// [2, 3, 4, 5, 3, 5, 3, 0]
