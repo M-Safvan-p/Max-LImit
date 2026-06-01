@@ -45,3 +45,28 @@ console.log(square(5))
 console.log(square(6))
 console.log(square(6))
 console.log(square(6))
+
+
+// 
+function memo(fn){
+    let cache = new Map()
+    return function(...args){
+        let key = JSON.stringify(args)
+        if(cache.has(key)){
+            return cache.get(key)
+        }
+        let result = fn(...args)
+        cache.set(key,result)
+        return result
+    }
+}
+
+
+function add(a,b){
+    return a+b
+}
+
+const memoAdd = memo(add)
+
+log(memoAdd(1,2))
+log(memoAdd(1,2))
