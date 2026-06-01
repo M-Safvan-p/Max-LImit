@@ -89,6 +89,15 @@ randomPromise()
   .then(console.log)
   .catch(console.error)
   .finally(() => console.log("End"));
+/*
+randomPromise()
+  .then((result) => {
+    console.log(result);   above one is shoter version , this is the normal version
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+  */  
 
 
   /*
